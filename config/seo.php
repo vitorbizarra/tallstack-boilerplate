@@ -12,7 +12,7 @@ return [
     /**
      * Use this setting to specify the site name that will be used in OpenGraph tags.
      */
-    'site_name' => null,
+    'site_name' => config('app.name'),
 
     /**
      * Use this setting to specify the path to the sitemap of your website. This exact path will outputted, so
@@ -23,7 +23,7 @@ return [
      * to the root domain and not relative to the current URL. The `spatie/laravel-sitemap` package
      * is a great package to generate sitemaps for your application.
      */
-    'sitemap' => null,
+    'sitemap' => '/storage/sitemap.xml',
 
     /**
      * Use this setting to specify whether you want self-referencing `<link rel="canonical" href="$url">` tags to
@@ -69,7 +69,7 @@ return [
          *
          * For example, if you have a page with the url '/foo/about-me', we'll automatically set the title to 'About me' and append the site suffix.
          */
-        'infer_title_from_url' => true,
+        'infer_title_from_url' => false,
 
         /**
          * Use this setting to provide a suffix that will be added after the title on each page.

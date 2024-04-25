@@ -17,6 +17,7 @@
     @livewireStyles
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>{{ isset($title) ? config('app.name') . " - $title" : config('app.name') }}</title>
+    {!! seo() !!}
     @yield('seo')
 </head>
 
